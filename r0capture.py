@@ -53,6 +53,7 @@ import argparse
 import os
 import platform
 import pprint
+import hexdump
 import random
 import signal
 import socket
