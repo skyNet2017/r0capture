@@ -11,7 +11,11 @@
 
 [安卓 App 逆向课程之五 frida 注入 Okhttp 抓包下篇](https://cloud.tencent.com/developer/article/1669631)
 
+## 资料
 
+[AndroidSecurityStudy](https://github.com/r0ysue/AndroidSecurityStudy)
+
+[frida-all-in-one](https://github.com/hookmaster/frida-all-in-one)
 
 
 
