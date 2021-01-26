@@ -9,13 +9,13 @@
 - 通杀TCP/IP四层模型中的应用层中的全部协议；
 - 通杀协议包括：Http,WebSocket,Ftp,Xmpp,Imap,Smtp,Protobuf等等、以及它们的SSL版本；
 - 通杀所有应用层框架，包括HttpUrlConnection、Okhttp1/3/4、Retrofit/Volley等等；
+- 无视加固，不管是整体壳还是二代壳或VMP，不用考虑加固的事情；
 - 如果有抓不到的情况欢迎提issue，或者直接加vx：r0ysue，进行反馈~
 
 ### January.14th 2021 update：增加几个辅助功能
 
 - 增加App收发包函数定位功能
 - 增加App客户端证书导出功能
-- 增加SSL pinning代码定位功能
 
 ## 用法
 
@@ -46,16 +46,6 @@
 > 导出后的证书位于/sdcard/Download/包名xxx.p12路径，导出多次，每一份均可用，密码默认为：r0ysue，推荐使用[keystore-explorer](http://keystore-explorer.org/)打开查看证书。
 
 ![](pic/clientcer.png)
-
-- SSL pinning 代码定位功能（混淆后亦可）：默认开启；必须以Spawm模式运行；
-
-> 并不是所有的App都部署了证书绑定的功能，只有部署了的才可以定位到
-
-![](pic/sslunpinningcer.png)
-
-> 定位到经过混淆后的证书绑定器是z1.g.a方法之后用frida来过掉即可
-
-![](pic/bypass.png)
 
 
 PS：
