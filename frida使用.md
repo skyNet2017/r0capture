@@ -56,6 +56,10 @@ invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 * 只能针对apktool能反编译的apk. 有些加固的,反编译失败
 * 只能针对开发者未校验签名的apk.(好消息是,市面上大多数没有做)
 
+## 免root注入frida的其他方法:
+
+[objection 常用方法](https://www.zhangkunzhi.com/index.php/archives/328/)
+
 
 
 # 二 hook
@@ -133,3 +137,11 @@ frida -U  Gadget -l ignore2.js --no-pause
 然后在Android studio的logcat里,使用myhttp过滤,即可查看网络日志了:
 
 ![image-20210126111613590](https://gitee.com/hss012489/picbed/raw/master/picgo/1611630973630-image-20210126111613590.jpg)
+
+
+
+
+
+# 后续
+
+最好的方式还是root一台真机进行操作.
