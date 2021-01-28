@@ -130,6 +130,32 @@ adb push okhttp4.dex /data/local/tmp/
 frida -U  Gadget -l ignore2.js --no-pause
 ```
 
+js代码:
+
+```javascript
+setImmediate(function() {
+    console.log("[*] Starting script");
+    Java.perform(function () {
+        Java.openClassFile("/data/local/tmp/okhttp4.dex").load();
+        var OKhttpAOp = Java.use("com.hss01248.frida.ignoressldez.OKhttpAOp");
+        var Builder = Java.use("okhttp3.OkHttpClient$Builder");
+        console.log(Builder);
+        Builder.build.implementation = function () {
+            console.log(OKhttpAOp.doIgnore(this));
+            console.log("注入成功");
+            return this.build();
+        };
+        console.log("hook_okhttp3...");
+    });
+});
+```
+
+
+
+
+
+
+
 发现打印xx就是注入成功
 
 ![image-20210126111328824](https://gitee.com/hss012489/picbed/raw/master/picgo/1611630808858-image-20210126111328824.jpg)
