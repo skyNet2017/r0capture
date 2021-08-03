@@ -171,3 +171,11 @@ setImmediate(function() {
 # 后续
 
 最好的方式还是root一台真机进行操作.
+
+参考此文中的已root设备的操作: https://www.jianshu.com/p/bab4f4714d98
+
+![image-20210728112239234](https://gitee.com/hss012489/picbed/raw/master/picgo/1627442564444-image-20210728112239234.jpg)
+
+```bash
+adb push Downloads/frida-server-14.2.8-android-arm64 /data/local/tmp/frida-server
+```
